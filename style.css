@@ -1,0 +1,288 @@
+body {
+    direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #faf7f8;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+h1 {
+    color: #d6336c;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #7d6871;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.aesthetic-form {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(224, 196, 207, 0.3);
+    text-align: right;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    color: #4a3e43;
+    margin-bottom: 5px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0d0d5;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #d6336c;
+}
+
+.input-note {
+    display: block;
+    font-size: 11px;
+    color: #a38f97;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+.submit-btn {
+    background-color: #d6336c;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(214, 51, 108, 0.3);
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c1255c;
+}
+
+.theme-selector {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(224, 196, 207, 0.2);
+}
+
+.theme-selector p {
+    font-size: 13px;
+    color: #6b5b62;
+    margin: 0;
+    font-weight: bold;
+}
+
+.theme-dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease;
+    padding: 0;
+}
+
+.theme-dot:hover {
+    transform: scale(1.2);
+}
+
+.theme-dot.pink {
+    background-color: #ffccd5;
+}
+
+.theme-dot.green {
+    background-color: #c8e6c9;
+}
+
+.theme-dot.blue {
+    background-color: #b3e5fc;
+}
+
+.theme-dot.black {
+    background-color: #121212;
+}
+
+.aesthetic-card {
+    padding: 25px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    color: #4a3e43;
+    transition: background-color 0.3s ease;
+}
+
+.card-header {
+    font-size: 16px;
+    font-weight: bold;
+    color: #d6336c;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.card-body img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.insta-under-photo {
+    font-size: 14px;
+    color: #736269;
+    font-style: italic;
+    margin-bottom: 15px;
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.card-item {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 14px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.card-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+    color: #7d6871;
+}
+
+.viral-promo {
+    margin-top: 12px;
+    padding-top: 10px;
+    border-top: 1px dashed rgba(214, 51, 108, 0.2);
+    text-align: center;
+}
+
+.viral-promo p {
+    font-size: 12px;
+    color: #d6336c;
+    margin: 0 0 4px 0;
+    font-weight: bold;
+}
+
+.viral-promo .site-link {
+    font-size: 11px;
+    color: #6b5b62;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.aesthetic-card[style*="background-color: rgb(12, 12, 12)"] {
+    color: #ffffff !important;
+}
+
+.aesthetic-card[style*="background-color: rgb(12, 12, 12)"] .card-header {
+    color: #ff9ebb !important;
+}
+
+.aesthetic-card[style*="background-color: rgb(12, 12, 12)"] .insta-under-photo {
+    color: #ff9ebb !important;
+}
+
+.aesthetic-card[style*="background-color: rgb(12, 12, 12)"] .card-item {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+}
+
+.aesthetic-card[style*="background-color: rgb(12, 12, 12)"] .viral-promo p {
+    color: #ff9ebb !important;
+}
+
+.aesthetic-card[style*="background-color: rgb(12, 12, 12)"] .viral-promo .site-link {
+    color: #ffffff !important;
+}
+
+.action-buttons {
+    margin-top: 20px;
+}
+
+.share-insta-btn {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(220, 39, 67, 0.4);
+    transition: transform 0.2s;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: inherit;
+}
+
+.share-insta-btn:hover {
+    transform: scale(1.02);
+}
+
+.back-btn {
+    background-color: #e0d0d5;
+    color: #4a3e43;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اصنعي بطاقة هويتكِ الجمالية ✨</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <h1>اصنعي بطاقة هويتكِ الجمالية ✨</h1>
+        <p class="subtitle">أدخلي تفضيلاتكِ لتوليد بطاقة لطيفة جاهزة لستوري إنستغرام</p>
+
+        <div class="theme-selector">
+            <p>اختر ثيم ألوان البطاقة الحالية: </p>
+            <button type="button" class="theme-dot pink active" onclick="changeTheme('#ffccd5')"></button>
+            <button type="button" class="theme-dot green" onclick="changeTheme('#c8e6c9')"></button>
+            <button type="button" class="theme-dot blue" onclick="changeTheme('#b3e5fc')"></button>
+            <button type="button" class="theme-dot black" onclick="changeTheme('#121212')"></button>
+        </div>
+
+        <form id="bioForm" class="aesthetic-form">
+            <div class="input-group">
+                <label>الاسم أو اللقب:</label>
+                <input type="text" id="userName" placeholder="مثلاً: لورا، غيمة وردية..." required>
+            </div>
+
+            <div class="input-group">
+                <label>حساب إنستغرام (اختياري):</label>
+                <input type="text" id="userInsta" placeholder="مثلاً: @username">
+            </div>
+
+            <div class="input-group">
+                <label>العمر:</label>
+                <input type="number" id="userAge" placeholder="كم عمركِ؟" required>
+            </div>
+
+            <div class="input-group">
+                <label>ارفعي صورتكِ الشخصية 📸:</label>
+                <input type="file" id="userPhoto" accept="image/*" required>
+            </div>
+
+            <div class="input-group">
+                <label>الهواية المفضلة 🎨:</label>
+                <input type="text" id="userHobby" placeholder="الرسم, التصوير, القراءة...">
+            </div>
+
+            <div class="input-group">
+                <label>الأكلة المفضلة 🍕:</label>
+                <input type="text" id="favFood" placeholder="ورق عنب, باستا, بيتزا...">
+            </div>
+
+            <div class="input-group">
+                <label>المشروب المفضل ☕:</label>
+                <input type="text" id="favDrink" placeholder="قهوة ، ماتشا...">
+            </div>
+
+            <div class="input-group">
+                <label>أكثر شيء تكرهينه ❌:</label>
+                <input type="text" id="mostHated" placeholder="الاستيقاظ مبكراً، الكذب...">
+            </div>
+
+            <div class="input-group">
+                <label>صديقتكِ المقربة 👭:</label>
+                <input type="text" id="bestFriend" placeholder="اسم الـ Bestie...">
+            </div>
+
+            <div class="input-group">
+                <label>الرقم التعريفي للبطاقة (أحرف وأرقام):</label>
+                <input type="text" id="cardCustomId" placeholder="مثلاً: Lura2026" required>
+                <span class="input-note">💡 ملاحظة: هذا المعرّف سيعمل كرقم تعريفي خاص ببطاقتكِ لنظام الموقع، ولن يتم
+                    عرضه أو طباعته داخل البطاقة الجمالية.</span>
+            </div>
+
+            <button type="button" class="submit-btn">توليد البطاقة السحرية 🪄</button>
+        </form>
+
+        <div id="resultWrapper" style="display: none;">
+
+            <div id="resultCard" class="aesthetic-card" style="background-color: #ffccd5;">
+                <div class="card-header">
+                    <span class="sparkle">✨</span> MY AESTHETIC BIO <span class="sparkle">✨</span>
+                </div>
+
+                <div class="card-body">
+                    <div style="text-align: center; margin-bottom: 5px;">
+                        <img id="resPhoto" src="" alt="الصورة الشخصية" crossorigin="anonymous">
+                    </div>
+                    <div id="resInsta" class="insta-under-photo"></div>
+
+                    <div class="card-item"><strong>🌸 الاسـم:</strong> <span id="resName"></span></div>
+                    <div class="card-item"><strong>🎂 العمـر:</strong> <span id="resAge"></span> سنة</div>
+                    <div class="card-item"><strong>🎨 الهواية المفضلة:</strong> <span id="resHobby"></span></div>
+                    <div class="card-item"><strong>🍕 الأكلة المفضلة:</strong> <span id="resFood"></span></div>
+                    <div class="card-item"><strong>☕ المشروب المفضل:</strong> <span id="resDrink"></span></div>
+                    <div class="card-item"><strong>❌ أكثر شيء تكرهه:</strong> <span id="resHated"></span></div>
+                    <div class="card-item"><strong>👭 أقرب صديق :</strong> <span id="resFriend"></span></div>
+                </div>
+
+                <div class="card-footer">
+                    <small>جاهزة ومثالية للمشاركة في الـ Story 📸</small>
+
+                    <div class="viral-promo">
+                        <p>هل تريدين صنع بطاقتكِ السحرية الخاصة بكِ؟ 🪄</p>
+                        <span class="site-link">www.generatingthemagiccard.online</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button type="button" class="share-insta-btn" onclick="shareToInstagramStory()">مشاركة عبر ستوري
+                    إنستغرام 🚀✨</button>
+                <button type="button" class="back-btn" onclick="goBack()">إعادة المحاولة 🔄</button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
